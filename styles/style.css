@@ -1,0 +1,88 @@
+/* ヘッダー */
+header {
+    width: 100%;
+    background: rgba(246, 247, 248, 0.9);
+    color: #282928;
+    padding: 15px 50px;
+    box-sizing: border-box;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    flex-direction: column;   /* ★縦並び（改行の本質） */
+    align-items: flex-start;  /* 左寄せ */
+
+    z-index: 10;
+}
+
+/* タイトル余白調整 */
+header h1 {
+    margin: 0;
+}
+
+/* ナビの位置調整 */
+header .gnav {
+    margin-top: 8px;
+}
+
+/* メニュー */
+header .gnav .menu {
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+header .gnav .menu li {
+    list-style: none;
+}
+
+header .gnav .menu li + li {
+    margin-left: 40px;
+}
+
+header .menu li a {
+    color: #231F20;
+    text-decoration: none;
+}
+
+html {
+    scroll-padding-top: 150px;
+}
+
+h2 {
+  display: inline-block;
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 6px;
+  padding: 8px 24px;
+  background: #E6F1FB;
+  color: #0C447C;
+  margin: 0;
+}
+/* コンテンツボックス */
+.content-box {
+    color: white;
+    width: 60%;
+    margin: 20px auto;
+    padding: 30px;
+    background: rgba(0, 163, 175, 0.85);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* フッター（修正版） */
+footer {
+    width: 100%;
+    background-color: #ffffff;
+    color: #000000;
+    text-align: center;
+    padding: 15px 0;
+
+    position: fixed;
+    bottom: 0;
+    left: 0;
+
+    z-index: 10;
+}
