@@ -15,40 +15,6 @@
   background: url('background.jpg') no-repeat center/cover;
   z-index: -1;
 }
-/* ===== タブ ===== */
-.tabs {
-  display: flex;
-  gap: 4px;
-  border-bottom: 1.5px solid rgba(255, 255, 255, 0.4);
-  margin-bottom: 20px;
-  flex: 1;
-}
-.tab-btn {
-  background: none;
-  border: none;
-  border-bottom: 2.5px solid transparent;
-  margin-bottom: -1.5px;
-  color: rgba(255, 255, 255, 0.6);
-  font-size: 14px;
-  padding: 8px 16px;
-  cursor: pointer;
-  flex: 1;
-  text-align: center;
-}
-.tab-btn.active {
-  color: #ffffff;
-  border-bottom-color: #ffffff;
-  font-weight: 500;
-}
-.tab-btn:hover {
-  color: rgba(255, 255, 255, 0.9);
-}
-.tab-panel {
-  display: none;
-}
-.tab-panel.active {
-  display: block;
-}
 </style>
 </head>
 <body>
@@ -107,14 +73,6 @@ function switchTab(i) {
   document.querySelectorAll('.tab-panel').forEach(function(p, j) {
     p.classList.toggle('active', i === j);
   });
-}
-function toggleNav() {
-  document.getElementById('burger').classList.toggle('open');
-  document.getElementById('gnav').classList.toggle('open');
-}
-function closeNav() {
-  document.getElementById('burger').classList.remove('open');
-  document.getElementById('gnav').classList.remove('open');
 }
 </script>
 </body>
