@@ -15,16 +15,6 @@
   background: url('background.jpg') no-repeat center/cover;
   z-index: -1;
 }
-.content-box {
-  width: 60%;
-  margin: 120px auto 80px;
-  padding: 30px;
-  background-color: rgba(123, 129, 116, 0.85);
-  border-radius: 10px;
-  font-size: 18px;
-  color: white;
-}
-
 /* ===== タブ ===== */
 .tabs {
   display: flex;
@@ -59,14 +49,13 @@
 </style>
 </head>
 <body>
-
 <div class="background"></div>
+
 <header id="header">
   <div class="header-top">
-    <h1>  
+    <h1>
       <a href="index.html"><img src="icon.png" alt="ロゴ" width="40%" height="6%"></a>
     </h1>
-    <!-- ★タブをここに移動 -->
     <div class="tabs">
       <button class="tab-btn active" onclick="switchTab(0)">About us</button>
       <button class="tab-btn" onclick="switchTab(1)">『梓』について</button>
@@ -77,20 +66,16 @@
 </header>
 
 <div class="content-box">
-
-<div class="content-box">
   <div class="tab-panel active" id="tab0">
     <h2>梓について</h2>
     <p>われわれは、早稲田大学の学生が中心となって活動している同人出版サークルです。総合学術系季刊誌『梓』を発行しています。</p>
   </div>
-
   <div class="tab-panel" id="tab1">
     <h2>『梓』について</h2>
     <p>『梓』は総合学術系雑誌であり、「ノージャンル」で「特定の領域にとらわれない」ことをモットーに活動しています。
     学術系文章やエッセイ、小説などを掲載しています。また今後は取材のコーナーも設ける予定です。2026年2月に創刊号となる『梓 2026 winter』を発行し、「文学フリマ広島8」で販売しました。
     また2026年5月には「文学フリマ東京42」で『梓 2026 spring』を販売する予定です。</p>
   </div>
-
   <div class="tab-panel" id="tab2">
     <h2>作品</h2>
     <ul>
@@ -98,7 +83,6 @@
       <li><a href="2026spring.html">『梓 2026 spring』</a></li>
     </ul>
   </div>
-
   <div class="tab-panel" id="tab3">
     <h2>活動紹介</h2>
     <ul>
@@ -106,7 +90,6 @@
       <li><a href="https://bunfree.net/event/tokyo42/">文学フリマ東京42</a>に出店しました</li>
     </ul>
   </div>
-
 </div>
 
 <footer id="footer">
@@ -131,6 +114,5 @@ function closeNav() {
   document.getElementById('gnav').classList.remove('open');
 }
 </script>
-
 </body>
 </html>
