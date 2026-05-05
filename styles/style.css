@@ -134,7 +134,7 @@ h2 {
 }
 /* ===== スマホ用ドロップダウン ===== */
 .tabs-mobile {
-  display: none;
+  display: flex;
   flex-direction: column;
   width: 100%;
   background: #ffffff;
