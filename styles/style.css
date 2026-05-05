@@ -2,8 +2,7 @@
 header {
     width: 100%;
     background: rgba(255, 255, 255, 1);
-    color: 
-#282928;
+    color: #282928;
     padding: 15px 50px;
     box-sizing: border-box;
     position: fixed;
@@ -22,23 +21,19 @@ header {
 header .tabs {
   border-bottom-color: rgba(0, 0, 0, 0.2);
   margin-bottom: 0;
-  flex: 1;
 }
 header .tab-btn {
   color: rgba(0, 0, 0, 0.5);
-  flex: 1;
 }
 header .tab-btn.active {
-  color: 
-#282928;
-  border-bottom-color: 
-#282928;
+  color: #282928;
+  border-bottom-color: #282928;
 }
 header .tab-btn:hover {
   color: rgba(0, 0, 0, 0.8);
 }
 body {
-    padding-top: 110px; /* ヘッダーの高さに合わせて調整 */
+    padding-top: 80px; /* ヘッダーの高さに合わせて調整 */
     padding-bottom: 60px; /* フッター分 */
 }
 /* タイトル余白調整 */
@@ -54,10 +49,8 @@ h2 {
   font-weight: 500;
   border-radius: 6px;
   padding: 8px 24px;
-  background: 
-#E6F1FB;
-  color: 
-#0C447C;
+  background: #E6F1FB;
+  color: #0C447C;
   margin: 0;
 }
 /* コンテンツボックス */
@@ -74,10 +67,8 @@ h2 {
 /* フッター */
 footer {
     width: 100%;
-    background-color: 
-#ffffff;
-    color: 
-#000000;
+    background-color: #ffffff;
+    color: #000000;
     text-align: center;
     padding: 15px 0;
     position: fixed;
