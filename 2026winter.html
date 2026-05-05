@@ -25,22 +25,31 @@
       <h1>
         <a href="2026winter.html"><img src="2026winterlogo.png" alt="winterlogo"></a>
       </h1>
-      <nav class="tabs">
+      <!-- PC用タブ -->
+      <nav class="tabs" id="tabs-pc">
         <button class="tab-btn active" onclick="switchTab(0)">特集</button>
         <button class="tab-btn" onclick="switchTab(1)">掲載作品</button>
         <button class="tab-btn" onclick="switchTab(2)">書誌情報</button>
       </nav>
+      <!-- ハンバーガーボタン（スマホのみ） -->
+      <button class="burger" id="burger" onclick="toggleNav()" aria-label="メニュー">
+        <span></span><span></span><span></span>
+      </button>
     </div>
+    <!-- スマホ用ドロップダウン -->
+    <nav class="tabs-mobile" id="tabs-mobile">
+      <button class="tab-btn active" onclick="switchTab(0); closeNav()">特集</button>
+      <button class="tab-btn" onclick="switchTab(1); closeNav()">掲載作品</button>
+      <button class="tab-btn" onclick="switchTab(2); closeNav()">書誌情報</button>
+    </nav>
   </header>
 
   <main class="content-box">
     <p><a href="index.html">トップへ戻る</a></p>
-
     <div class="tab-panel active" id="tab0">
       <h2>特集</h2>
       <p>谷崎潤一郎</p>
     </div>
-
     <div class="tab-panel" id="tab1">
       <h2>掲載作品</h2>
       <h3>巻頭コラム</h3>
@@ -81,7 +90,6 @@
         <li>言うも難し</li>
       </ul>
     </div>
-
     <div class="tab-panel" id="tab2">
       <h2>書誌情報</h2>
       <ul>
@@ -101,6 +109,14 @@
     function switchTab(i) {
       document.querySelectorAll('.tab-btn').forEach((b, j) => b.classList.toggle('active', i === j));
       document.querySelectorAll('.tab-panel').forEach((p, j) => p.classList.toggle('active', i === j));
+    }
+    function toggleNav() {
+      document.getElementById('burger').classList.toggle('open');
+      document.getElementById('tabs-mobile').classList.toggle('open');
+    }
+    function closeNav() {
+      document.getElementById('burger').classList.remove('open');
+      document.getElementById('tabs-mobile').classList.remove('open');
     }
   </script>
 </body>
