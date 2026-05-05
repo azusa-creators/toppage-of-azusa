@@ -1,48 +1,101 @@
-/* ヘッダー */
-header {
-    width: 100%;
-    background: rgba(255, 255, 255, 1);
-    color: #282928;
-    padding: 15px 50px;
-    box-sizing: border-box;
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: block;
-    z-index: 10;
+/* ===== リセット・基本 ===== */
+*, *::before, *::after {
+  box-sizing: border-box;
 }
+
+html {
+  scroll-padding-top: 100px;
+}
+
+body {
+  margin: 0;
+  padding-top: 100px;
+  padding-bottom: 60px;
+}
+
+/* ===== 背景 ===== */
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('../background.jpg') no-repeat center / cover;
+  z-index: -1;
+}
+
+/* ===== ヘッダー ===== */
+header {
+  width: 100%;
+  background: #ffffff;
+  color: #282928;
+  padding: 15px 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
 .header-top {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
 }
-/* ヘッダー内タブの色を白背景用に上書き */
-header .tabs {
-  border-bottom-color: rgba(0, 0, 0, 0.2);
-  margin-bottom: 0;
+
+header h1 {
+  margin: 0;
 }
-header .tab-btn {
+
+header h1 img {
+  display: block;
+  height: 40px;
+  width: auto;
+  opacity: 0.9;
+}
+
+/* ===== タブ ===== */
+.tabs {
+  display: flex;
+  flex: 1;
+  gap: 4px;
+  margin-left: 40px;
+  border-bottom: 1.5px solid rgba(0, 0, 0, 0.2);
+}
+
+.tab-btn {
+  flex: 1;
+  text-align: center;
+  background: none;
+  border: none;
+  border-bottom: 2.5px solid transparent;
+  margin-bottom: -1.5px;
+  padding: 8px 16px;
+  font-size: 14px;
   color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  transition: color 0.2s;
 }
-header .tab-btn.active {
+
+.tab-btn.active {
   color: #282928;
   border-bottom-color: #282928;
+  font-weight: 500;
 }
-header .tab-btn:hover {
+
+.tab-btn:hover {
   color: rgba(0, 0, 0, 0.8);
 }
-body {
-    padding-top: 100px; /* ヘッダーの高さに合わせて調整 */
-    padding-bottom: 60px; /* フッター分 */
+
+.tab-panel {
+  display: none;
 }
-/* タイトル余白調整 */
-header h1 {
-    margin: 0;
+
+.tab-panel.active {
+  display: block;
 }
-html {
-    scroll-padding-top: 100px;
-}
+
+/* ===== 見出し ===== */
 h2 {
   display: inline-block;
   font-size: 20px;
@@ -51,28 +104,31 @@ h2 {
   padding: 8px 24px;
   background: #E6F1FB;
   color: #0C447C;
-  margin: 0;
+  margin: 0 0 16px;
 }
-/* コンテンツボックス */
+
+/* ===== コンテンツボックス ===== */
 .content-box {
-    color: white;
-    width: 60%;
-    margin: 20px auto;
-    padding: 30px;
-    background-color: rgba(123, 129, 116, 0.85);
-    border-radius: 10px;
-    font-size: 18px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  display: block;
+  width: 60%;
+  margin: 20px auto;
+  padding: 30px;
+  background-color: rgba(123, 129, 116, 0.85);
+  border-radius: 10px;
+  font-size: 18px;
+  color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
-/* フッター */
+
+/* ===== フッター ===== */
 footer {
-    width: 100%;
-    background-color: #ffffff;
-    color: #000000;
-    text-align: center;
-    padding: 15px 0;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    z-index: 10;
+  width: 100%;
+  background: #ffffff;
+  color: #000000;
+  text-align: center;
+  padding: 15px 0;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
 }
