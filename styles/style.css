@@ -17,6 +17,29 @@ header {
     z-index: 10;
 }
 
+.header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* 左：ロゴ、中：タブ、右：バーガー */
+  width: 100%;
+}
+
+/* ヘッダー内タブの色を白背景用に上書き */
+header .tabs {
+  border-bottom-color: rgba(0, 0, 0, 0.2);
+  margin-bottom: 0;
+}
+header .tab-btn {
+  color: rgba(0, 0, 0, 0.5);
+}
+header .tab-btn.active {
+  color: #282928;
+  border-bottom-color: #282928;
+}
+header .tab-btn:hover {
+  color: rgba(0, 0, 0, 0.8);
+}
+
 body {
     padding-top: 40px;  /* ヘッダーの高さに合わせて調整 */
 }
