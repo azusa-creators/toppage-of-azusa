@@ -35,7 +35,7 @@ header .tab-btn:hover {
   color: rgba(0, 0, 0, 0.8);
 }
 body {
-    padding-top: 100px; /* ヘッダーの高さに合わせて調整 */
+    padding-top: 110px; /* ヘッダーの高さに合わせて調整 */
     padding-bottom: 60px; /* フッター分 */
 }
 /* タイトル余白調整 */
