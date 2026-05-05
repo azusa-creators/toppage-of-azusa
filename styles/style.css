@@ -70,7 +70,11 @@ h2 {
 @media (max-width: 768px) {
   .burger { display: flex; }
   #tabs-pc { display: none; }
-  .content-box { width: 95%; padding: 20px; font-size: 16px; }
+  .content-box {
+    width: 95%;
+    padding: 20px;
+    font-size: 16px;
+  }
 }
 
 .content-box {
