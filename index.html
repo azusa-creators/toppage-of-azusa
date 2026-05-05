@@ -72,10 +72,21 @@
   </footer>
 
   <script>
-    function switchTab(i) {
-      document.querySelectorAll('.tab-btn').forEach((b, j) => b.classList.toggle('active', i === j));
-      document.querySelectorAll('.tab-panel').forEach((p, j) => p.classList.toggle('active', i === j));
-    }
+function switchTab(i) {
+  // PC・スマホ両方のタブボタンを同期
+  document.querySelectorAll('.tab-btn').forEach((b, j) => b.classList.toggle('active', i === j));
+  document.querySelectorAll('.tab-panel').forEach((p, j) => p.classList.toggle('active', i === j));
+}
+
+function toggleNav() {
+  document.getElementById('burger').classList.toggle('open');
+  document.getElementById('tabs-mobile').classList.toggle('open');
+}
+
+function closeNav() {
+  document.getElementById('burger').classList.remove('open');
+  document.getElementById('tabs-mobile').classList.remove('open');
+}
   </script>
 </body>
 </html>
