@@ -11,14 +11,12 @@ header {
     display: block;
     z-index: 10;
 }
-
 .header-top {
   display: flex;
   align-items: center;
-  justify-content: space-between; /* 左：ロゴ、中：タブ、右：バーガー */
+  justify-content: space-between;
   width: 100%;
 }
-
 /* ヘッダー内タブの色を白背景用に上書き */
 header .tabs {
   border-bottom-color: rgba(0, 0, 0, 0.2);
@@ -34,45 +32,17 @@ header .tab-btn.active {
 header .tab-btn:hover {
   color: rgba(0, 0, 0, 0.8);
 }
-
 body {
-    padding-top: 40px;  /* ヘッダーの高さに合わせて調整 */
+    padding-top: 80px; /* ヘッダーの高さに合わせて調整 */
+    padding-bottom: 60px; /* フッター分 */
 }
-
 /* タイトル余白調整 */
 header h1 {
     margin: 0;
 }
-
-/* ナビの位置調整 */
-header .gnav {
-    margin-top: 8px;
-}
-
-/* メニュー */
-header .gnav .menu {
-    display: flex;
-    padding: 0;
-    margin: 0;
-}
-
-header .gnav .menu li {
-    list-style: none;
-}
-
-header .gnav .menu li + li {
-    margin-left: 40px;
-}
-
-header .menu li a {
-    color: #231F20;
-    text-decoration: none;
-}
-
 html {
-    scroll-padding-top: 150px;
+    scroll-padding-top: 100px;
 }
-
 h2 {
   display: inline-block;
   font-size: 20px;
@@ -89,22 +59,20 @@ h2 {
     width: 60%;
     margin: 20px auto;
     padding: 30px;
-    background: rgba(0, 163, 175, 0.85);
-    border-radius: 12px;
+    background-color: rgba(123, 129, 116, 0.85);
+    border-radius: 10px;
+    font-size: 18px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
-
-/* フッター（修正版） */
+/* フッター */
 footer {
     width: 100%;
     background-color: #ffffff;
     color: #000000;
     text-align: center;
     padding: 15px 0;
-
     position: fixed;
     bottom: 0;
     left: 0;
-
     z-index: 10;
 }
