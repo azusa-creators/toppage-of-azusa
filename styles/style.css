@@ -17,6 +17,10 @@ header {
     z-index: 10;
 }
 
+header img {
+    opacity: 0.9;
+}
+
 body {
     padding-top: 40px;  /* ヘッダーの高さに合わせて調整 */
 }
