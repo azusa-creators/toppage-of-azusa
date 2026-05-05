@@ -95,7 +95,7 @@ h2 {
 /* ===== コンテンツボックス ===== */
 .content-box {
   display: block;
-  width: min(90%, 800px);
+  width: 60%;
   margin: 20px auto;
   padding: 30px;
   background-color: rgba(123, 129, 116, 0.85);
@@ -134,7 +134,7 @@ h2 {
 }
 /* ===== スマホ用ドロップダウン ===== */
 .tabs-mobile {
-  display: flex;
+  display: none;
   flex-direction: column;
   width: 100%;
   background: #ffffff;
