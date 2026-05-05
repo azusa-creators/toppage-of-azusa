@@ -1,75 +1,62 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width">
-<link href="styles/style.css" rel="stylesheet" />
-<title>梓｜Azusa</title>
-<style>
-.background {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: url('background.jpg') no-repeat center/cover;
-  z-index: -1;
-}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link href="styles/style.css" rel="stylesheet" />
+  <title>梓｜Azusa</title>
 </head>
 <body>
-<div class="background"></div>
-<header id="header">
-  <div class="header-top">
-    <h1>
-      <a href="index.html"><img src="icon.png" alt="ロゴ" width="40%" height="6%"></a>
-    </h1>
-    <div class="tabs">
-      <button class="tab-btn active" onclick="switchTab(0)">About us</button>
-      <button class="tab-btn" onclick="switchTab(1)">『梓』について</button>
-      <button class="tab-btn" onclick="switchTab(2)">作品</button>
-      <button class="tab-btn" onclick="switchTab(3)">活動紹介</button>
+  <div class="background"></div>
+
+  <header id="header">
+    <div class="header-top">
+      <h1>
+        <a href="index.html"><img src="icon.png" alt="梓ロゴ"></a>
+      </h1>
+      <nav class="tabs">
+        <button class="tab-btn active" onclick="switchTab(0)">About us</button>
+        <button class="tab-btn" onclick="switchTab(1)">『梓』について</button>
+        <button class="tab-btn" onclick="switchTab(2)">作品</button>
+        <button class="tab-btn" onclick="switchTab(3)">活動紹介</button>
+      </nav>
     </div>
-  </div>
-</header>
-<div class="content-box">
-  <div class="tab-panel active" id="tab0">
-    <h2>梓について</h2>
-    <p>われわれは、早稲田大学の学生が中心となって活動している同人出版サークルです。総合学術系季刊誌『梓』を発行しています。</p>
-  </div>
-  <div class="tab-panel" id="tab1">
-    <h2>『梓』について</h2>
-    <p>『梓』は総合学術系雑誌であり、「ノージャンル」で「特定の領域にとらわれない」ことをモットーに活動しています。
-    学術系文章やエッセイ、小説などを掲載しています。また今後は取材のコーナーも設ける予定です。2026年2月に創刊号となる『梓 2026 winter』を発行し、「文学フリマ広島8」で販売しました。
-    また2026年5月には「文学フリマ東京42」で『梓 2026 spring』を販売する予定です。</p>
-  </div>
-  <div class="tab-panel" id="tab2">
-    <h2>作品</h2>
-    <ul>
-      <li><a href="2026winter.html">『梓 2026 winter』</a></li>
-      <li><a href="2026spring.html">『梓 2026 spring』</a></li>
-    </ul>
-  </div>
-  <div class="tab-panel" id="tab3">
-    <h2>活動紹介</h2>
-    <ul>
-      <li><a href="https://bunfree.net/event/hiroshima08/">文学フリマ広島8</a>に出店しました</li>
-      <li><a href="https://bunfree.net/event/tokyo42/">文学フリマ東京42</a>に出店しました</li>
-    </ul>
-  </div>
-</div>
-<footer id="footer">
-  © 梓 2025-2026
-</footer>
-<script>
-function switchTab(i) {
-  document.querySelectorAll('.tab-btn').forEach(function(b, j) {
-    b.classList.toggle('active', i === j);
-  });
-  document.querySelectorAll('.tab-panel').forEach(function(p, j) {
-    p.classList.toggle('active', i === j);
-  });
-}
-</script>
+  </header>
+
+  <main class="content-box">
+    <div class="tab-panel active" id="tab0">
+      <h2>梓について</h2>
+      <p>われわれは、早稲田大学の学生が中心となって活動している同人出版サークルです。総合学術系季刊誌『梓』を発行しています。</p>
+    </div>
+    <div class="tab-panel" id="tab1">
+      <h2>『梓』について</h2>
+      <p>『梓』は総合学術系雑誌であり、「ノージャンル」で「特定の領域にとらわれない」ことをモットーに活動しています。学術系文章やエッセイ、小説などを掲載しています。また今後は取材のコーナーも設ける予定です。2026年2月に創刊号となる『梓 2026 winter』を発行し、「文学フリマ広島8」で販売しました。また2026年5月には「文学フリマ東京42」で『梓 2026 spring』を販売する予定です。</p>
+    </div>
+    <div class="tab-panel" id="tab2">
+      <h2>作品</h2>
+      <ul>
+        <li><a href="2026winter.html">『梓 2026 winter』</a></li>
+        <li><a href="2026spring.html">『梓 2026 spring』</a></li>
+      </ul>
+    </div>
+    <div class="tab-panel" id="tab3">
+      <h2>活動紹介</h2>
+      <ul>
+        <li><a href="https://bunfree.net/event/hiroshima08/">文学フリマ広島8</a>に出店しました</li>
+        <li><a href="https://bunfree.net/event/tokyo42/">文学フリマ東京42</a>に出店しました</li>
+      </ul>
+    </div>
+  </main>
+
+  <footer id="footer">
+    © 梓 2025-2026
+  </footer>
+
+  <script>
+    function switchTab(i) {
+      document.querySelectorAll('.tab-btn').forEach((b, j) => b.classList.toggle('active', i === j));
+      document.querySelectorAll('.tab-panel').forEach((p, j) => p.classList.toggle('active', i === j));
+    }
+  </script>
 </body>
 </html>
