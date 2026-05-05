@@ -120,6 +120,75 @@ h2 {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
+/* ===== ハンバーガーボタン ===== */
+.burger {
+  display: none; /* PCでは非表示 */
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+.burger span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #282928;
+  transition: all 0.3s;
+}
+/* × ボタンのアニメーション */
+.burger.open span:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+.burger.open span:nth-child(2) {
+  opacity: 0;
+}
+.burger.open span:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+/* ===== スマホ用ドロップダウン ===== */
+.tabs-mobile {
+  display: none; /* 常に非表示（JSで制御） */
+  flex-direction: column;
+  width: 100%;
+  background: #ffffff;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.3s ease;
+}
+.tabs-mobile.open {
+  display: flex;
+  max-height: 300px;
+}
+.tabs-mobile .tab-btn {
+  flex: none;
+  text-align: left;
+  padding: 14px 24px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.6);
+}
+.tabs-mobile .tab-btn.active {
+  color: #282928;
+  border-bottom-color: #282928;
+  border-left: 3px solid #282928;
+}
+
+/* ===== スマホ時の切り替え ===== */
+@media (max-width: 768px) {
+  .burger {
+    display: flex; /* スマホでハンバーガー表示 */
+  }
+  #tabs-pc {
+    display: none; /* PCタブを非表示 */
+  }
+}
+
 /* ===== フッター ===== */
 footer {
   width: 100%;
