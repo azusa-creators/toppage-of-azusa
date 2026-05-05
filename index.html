@@ -61,24 +61,24 @@
 <body>
 
 <div class="background"></div>
-
 <header id="header">
   <div class="header-top">
-<h1>  
-<a href="index.html"><img src="icon.png" alt="ロゴ" width="40%" height="6%"></a>
-</h1>
+    <h1>  
+      <a href="index.html"><img src="icon.png" alt="ロゴ" width="40%" height="6%"></a>
+    </h1>
+    <!-- ★タブをここに移動 -->
+    <div class="tabs">
+      <button class="tab-btn active" onclick="switchTab(0)">About us</button>
+      <button class="tab-btn" onclick="switchTab(1)">『梓』について</button>
+      <button class="tab-btn" onclick="switchTab(2)">作品</button>
+      <button class="tab-btn" onclick="switchTab(3)">活動紹介</button>
+    </div>
   </div>
 </header>
 
 <div class="content-box">
 
-  <div class="tabs">
-    <button class="tab-btn active" onclick="switchTab(0)">About us</button>
-    <button class="tab-btn" onclick="switchTab(1)">『梓』について</button>
-    <button class="tab-btn" onclick="switchTab(2)">作品</button>
-    <button class="tab-btn" onclick="switchTab(3)">活動紹介</button>
-  </div>
-
+<div class="content-box">
   <div class="tab-panel active" id="tab0">
     <h2>梓について</h2>
     <p>われわれは、早稲田大学の学生が中心となって活動している同人出版サークルです。総合学術系季刊誌『梓』を発行しています。</p>
