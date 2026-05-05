@@ -1,7 +1,7 @@
 /* ヘッダー */
 header {
     width: 100%;
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 1);
     color: #282928;
     padding: 15px 50px;
     box-sizing: border-box;
@@ -15,10 +15,6 @@ header {
     align-items: flex-start;  /* 左寄せ */
 
     z-index: 10;
-}
-
-header img {
-    opacity: 0.9;
 }
 
 body {
