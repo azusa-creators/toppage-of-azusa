@@ -21,9 +21,11 @@ header {
 header .tabs {
   border-bottom-color: rgba(0, 0, 0, 0.2);
   margin-bottom: 0;
+  flex: 1;
 }
 header .tab-btn {
   color: rgba(0, 0, 0, 0.5);
+  flex: 1;
 }
 header .tab-btn.active {
   color: #282928;
