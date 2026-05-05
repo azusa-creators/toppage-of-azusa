@@ -13,6 +13,10 @@
       background: url('background.jpg') no-repeat center / cover;
       z-index: -1;
     }
+   .burger.open span:nth-child(1) { transform: translateY(9px) rotate(45deg); }
+   .burger.open span:nth-child(2) { opacity: 0; }
+   .burger.open span:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
+.tabs-mobile.open { display: flex; max-height: 300px; }
   </style>
 </head>
 <body>
