@@ -17,33 +17,28 @@
 </head>
 <body>
   <div class="background"></div>
-
-<header id="header">
-  <div class="header-top">
-    <h1>
-      <a href="index.html"><img src="icon.png" alt="梓ロゴ"></a>
-    </h1>
-    <!-- PC用タブ（スマホでは非表示） -->
-    <nav class="tabs" id="tabs-pc">
-      <button class="tab-btn active" onclick="switchTab(0)">About us</button>
-      <button class="tab-btn" onclick="switchTab(1)">『梓』について</button>
-      <button class="tab-btn" onclick="switchTab(2)">作品</button>
-      <button class="tab-btn" onclick="switchTab(3)">活動紹介</button>
+  <header id="header">
+    <div class="header-top">
+      <h1>
+        <a href="index.html"><img src="icon.png" alt="梓ロゴ"></a>
+      </h1>
+      <nav class="tabs" id="tabs-pc">
+        <button class="tab-btn active" onclick="switchTab(0)">About us</button>
+        <button class="tab-btn" onclick="switchTab(1)">『梓』について</button>
+        <button class="tab-btn" onclick="switchTab(2)">作品</button>
+        <button class="tab-btn" onclick="switchTab(3)">活動紹介</button>
+      </nav>
+      <button class="burger" id="burger" onclick="toggleNav()" aria-label="メニュー">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <nav class="tabs-mobile" id="tabs-mobile">
+      <button class="tab-btn active" onclick="switchTab(0); closeNav()">About us</button>
+      <button class="tab-btn" onclick="switchTab(1); closeNav()">『梓』について</button>
+      <button class="tab-btn" onclick="switchTab(2); closeNav()">作品</button>
+      <button class="tab-btn" onclick="switchTab(3); closeNav()">活動紹介</button>
     </nav>
-    <!-- ハンバーガーボタン（スマホのみ表示） -->
-    <button class="burger" id="burger" onclick="toggleNav()" aria-label="メニュー">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-  <!-- スマホ用ドロップダウンタブ -->
-  <nav class="tabs-mobile" id="tabs-mobile">
-    <button class="tab-btn active" onclick="switchTab(0); closeNav()">About us</button>
-    <button class="tab-btn" onclick="switchTab(1); closeNav()">『梓』について</button>
-    <button class="tab-btn" onclick="switchTab(2); closeNav()">作品</button>
-    <button class="tab-btn" onclick="switchTab(3); closeNav()">活動紹介</button>
-  </nav>
-</header>
-
+  </header>
   <main class="content-box">
     <div class="tab-panel active" id="tab0">
       <h2>梓について</h2>
@@ -68,27 +63,22 @@
       </ul>
     </div>
   </main>
-
   <footer id="footer">
     © 梓 2025-2026
   </footer>
-
   <script>
-function switchTab(i) {
-  // PC・スマホ両方のタブボタンを同期
-  document.querySelectorAll('.tab-btn').forEach((b, j) => b.classList.toggle('active', i === j));
-  document.querySelectorAll('.tab-panel').forEach((p, j) => p.classList.toggle('active', i === j));
-}
-
-function toggleNav() {
-  document.getElementById('burger').classList.toggle('open');
-  document.getElementById('tabs-mobile').classList.toggle('open');
-}
-
-function closeNav() {
-  document.getElementById('burger').classList.remove('open');
-  document.getElementById('tabs-mobile').classList.remove('open');
-}
+    function switchTab(i) {
+      document.querySelectorAll('.tab-btn').forEach((b, j) => b.classList.toggle('active', i === j));
+      document.querySelectorAll('.tab-panel').forEach((p, j) => p.classList.toggle('active', i === j));
+    }
+    function toggleNav() {
+      document.getElementById('burger').classList.toggle('open');
+      document.getElementById('tabs-mobile').classList.toggle('open');
+    }
+    function closeNav() {
+      document.getElementById('burger').classList.remove('open');
+      document.getElementById('tabs-mobile').classList.remove('open');
+    }
   </script>
 </body>
 </html>
