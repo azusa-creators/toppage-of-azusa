@@ -168,12 +168,6 @@ h2 {
   #tabs-pc {
     display: none;
   }
-  .content-box {
-    width: 95%;
-    margin: 20px auto;
-    padding: 20px;
-    font-size: 16px;
-  }
 }
 /* ===== フッター ===== */
 footer {
