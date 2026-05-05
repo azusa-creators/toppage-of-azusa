@@ -1,159 +1,107 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width">
-<link href="styles/style.css" rel="stylesheet" />
-<title>梓｜Azusa｜2026winter</title>
-<style>
-.background {
-position: fixed;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-background: url('background.jpg') no-repeat center/cover;
-z-index: -1;
-}
-.content-box {
-width: 60%;
-margin: 120px auto 80px;
-padding: 30px;
-background-color: rgba(123, 129, 116, 0.85);
-border-radius: 10px;
-font-size: 18px;
-color: white;
-}
-.tabs {
-display: flex;
-gap: 4px;
-border-bottom: 1.5px solid rgba(255, 255, 255, 0.4);
-margin-bottom: 20px;
-}
-.tab-btn {
-background: none;
-border: none;
-border-bottom: 2.5px solid transparent;
-margin-bottom: -1.5px;
-color: rgba(255, 255, 255, 0.6);
-font-size: 14px;
-padding: 8px 16px;
-cursor: pointer;
-}
-.tab-btn.active {
-color: #ffffff;
-border-bottom-color: #ffffff;
-font-weight: 500;
-}
-.tab-btn:hover { color: rgba(255, 255, 255, 0.9); }
-.tab-panel { display: none; }
-.tab-panel.active { display: block; }
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link href="styles/style.css" rel="stylesheet" />
+  <title>梓｜Azusa｜2026winter</title>
+  <style>
+    .background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('background.jpg') no-repeat center / cover;
+      z-index: -1;
+    }
+  </style>
 </head>
 <body>
+  <div class="background"></div>
 
-<div class="background"></div>
+  <header id="header">
+    <div class="header-top">
+      <h1>
+        <a href="index.html"><img src="2026winterlogo.png" alt="winterlogo"></a>
+      </h1>
+      <nav class="tabs">
+        <button class="tab-btn active" onclick="switchTab(0)">特集</button>
+        <button class="tab-btn" onclick="switchTab(1)">掲載作品</button>
+        <button class="tab-btn" onclick="switchTab(2)">書誌情報</button>
+      </nav>
+    </div>
+  </header>
 
-<header id="header">
-<div class="header-top">
-<h1>
-  <img src="2026winterlogo.png" alt="winterlogo" width="40%" height="3%">
-</h1>
-<button class="burger" id="burger" onclick="toggleNav()" aria-label="メニュー">
-<span></span><span></span><span></span>
-</button>
-</div>
-</header>
+  <main class="content-box">
+    <p><a href="index.html">トップへ戻る</a></p>
 
-<div class="content-box">
-<p><a href="index.html">トップへ戻る</a></p>
+    <div class="tab-panel active" id="tab0">
+      <h2>特集</h2>
+      <p>谷崎潤一郎</p>
+    </div>
 
-<div class="tabs">
-<button class="tab-btn active" onclick="switchTab(0)">特集</button>
-<button class="tab-btn" onclick="switchTab(1)">掲載作品</button>
-<button class="tab-btn" onclick="switchTab(2)">書誌情報</button>
-</div>
+    <div class="tab-panel" id="tab1">
+      <h2>掲載作品</h2>
+      <h3>巻頭コラム</h3>
+      <ul>
+        <li>ふりかえり→文体解放へ</li>
+        <li>競馬つれづれ</li>
+        <li>テストって難しいな</li>
+        <li>先ず「解（説書）」より始めよ</li>
+        <li>原著礼賛</li>
+      </ul>
+      <h3>特集</h3>
+      <ul>
+        <li>谷崎潤一郎　事始</li>
+        <li>谷崎潤一郎のこと</li>
+        <li>谷崎潤一郎から考える現代数学と日本人</li>
+      </ul>
+      <h3>対談</h3>
+      <ul>
+        <li>ハイカルチャーとサブカルチャー</li>
+      </ul>
+      <h3>寄稿文</h3>
+      <ul>
+        <li>メン地下入門</li>
+        <li>「雨の降る品川駅」と詩人・中野重治</li>
+        <li>人生、谷あり谷あり</li>
+        <li>社会科学とその照準の先に映るもの</li>
+        <li>八方美人になってみない？</li>
+        <li>ルポ有馬記念</li>
+      </ul>
+      <h3>小説</h3>
+      <ul>
+        <li>願い/解説</li>
+        <li>とこしえ旅計画</li>
+        <li>樹/解説</li>
+      </ul>
+      <h3>巻末コラム</h3>
+      <ul>
+        <li>言うも難し</li>
+      </ul>
+    </div>
 
-<div class="tab-panel active" id="tab0">
-<h2>特集</h2>
-<p>谷崎潤一郎</p>
-</div>
+    <div class="tab-panel" id="tab2">
+      <h2>書誌情報</h2>
+      <ul>
+        <li>ページ数：89ページ</li>
+        <li>2026年2月8日発行</li>
+        <li>編集人：大野慈温</li>
+        <li>発行人：鈴木翔太</li>
+      </ul>
+    </div>
+  </main>
 
-<div class="tab-panel" id="tab1">
-<h2>掲載作品</h2>
-<h3>巻頭コラム</h3>
-<ul>
-<li>ふりかえり→文体解放へ</li>
-<li>競馬つれづれ</li>
-<li>テストって難しいな</li>
-<li>先ず「解（説書）」より始めよ</li>
-<li>原著礼賛</li>
-</ul>
-<h3>特集</h3>
-<ul>
-<li>谷崎潤一郎　事始</li>
-<li>谷崎潤一郎のこと</li>
-<li>谷崎潤一郎から考える現代数学と日本人</li>
-</ul>
-<h3>対談</h3>
-<ul>
-<li>ハイカルチャーとサブカルチャー</li>
-</ul>
-<h3>寄稿文</h3>
-<ul>
-<li>メン地下入門</li>
-<li>「雨の降る品川駅」と詩人・中野重治</li>
-<li>人生、谷あり谷あり</li>
-<li>社会科学とその照準の先に映るもの</li>
-<li>八方美人になってみない？</li>
-<li>ルポ有馬記念</li>
-</ul>
-<h3>小説</h3>
-<ul>
-<li>願い/解説</li>
-<li>とこしえ旅計画</li>
-<li>樹/解説</li>
-</ul>
-<h3>巻末コラム</h3>
-<ul>
-<li>言うも難し</li>
-</ul>
-</div>
+  <footer id="footer">
+    © 梓 2025-2026
+  </footer>
 
-<div class="tab-panel" id="tab2">
-<h2>書誌情報</h2>
-<ul>
-<li>ページ数：89ページ</li>
-<li>2026年2月8日発行</li>
-<li>編集人：大野慈温</li>
-<li>発行人：鈴木翔太</li>
-</ul>
-</div>
-
-</div>
-
-<footer id="footer">
-© 梓 2025-2026
-</footer>
-
-<script>
-function switchTab(i) {
-document.querySelectorAll('.tab-btn').forEach(function(b, j) {
-b.classList.toggle('active', i === j);
-});
-document.querySelectorAll('.tab-panel').forEach(function(p, j) {
-p.classList.toggle('active', i === j);
-});
-}
-function toggleNav() {
-document.getElementById('burger').classList.toggle('open');
-document.getElementById('gnav').classList.toggle('open');
-}
-function closeNav() {
-document.getElementById('burger').classList.remove('open');
-document.getElementById('gnav').classList.remove('open');
-}
-</script>
-
+  <script>
+    function switchTab(i) {
+      document.querySelectorAll('.tab-btn').forEach((b, j) => b.classList.toggle('active', i === j));
+      document.querySelectorAll('.tab-panel').forEach((p, j) => p.classList.toggle('active', i === j));
+    }
+  </script>
 </body>
 </html>
