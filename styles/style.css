@@ -2,17 +2,14 @@
 *, *::before, *::after {
   box-sizing: border-box;
 }
-
 html {
   scroll-padding-top: 100px;
 }
-
 body {
   margin: 0;
   padding-top: 100px;
   padding-bottom: 60px;
 }
-
 /* ===== 背景 ===== */
 .background {
   position: fixed;
@@ -23,7 +20,6 @@ body {
   background: url('../background.jpg') no-repeat center / cover;
   z-index: -1;
 }
-
 /* ===== ヘッダー ===== */
 header {
   width: 100%;
@@ -35,25 +31,21 @@ header {
   left: 0;
   z-index: 10;
 }
-
 .header-top {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
 }
-
 header h1 {
   margin: 0;
 }
-
 header h1 img {
   display: block;
   height: 40px;
   width: auto;
   opacity: 0.9;
 }
-
 /* ===== タブ ===== */
 .tabs {
   display: flex;
@@ -62,7 +54,6 @@ header h1 img {
   margin-left: 40px;
   border-bottom: 1.5px solid rgba(0, 0, 0, 0.2);
 }
-
 .tab-btn {
   flex: 1;
   text-align: center;
@@ -76,25 +67,20 @@ header h1 img {
   cursor: pointer;
   transition: color 0.2s;
 }
-
 .tab-btn.active {
   color: #282928;
   border-bottom-color: #282928;
   font-weight: 500;
 }
-
 .tab-btn:hover {
   color: rgba(0, 0, 0, 0.8);
 }
-
 .tab-panel {
   display: none;
 }
-
 .tab-panel.active {
   display: block;
 }
-
 /* ===== 見出し ===== */
 h2 {
   display: inline-block;
@@ -106,7 +92,6 @@ h2 {
   color: #0C447C;
   margin: 0 0 16px;
 }
-
 /* ===== コンテンツボックス ===== */
 .content-box {
   display: block;
@@ -119,10 +104,9 @@ h2 {
   color: white;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
-
 /* ===== ハンバーガーボタン ===== */
 .burger {
-  display: none; /* PCでは非表示 */
+  display: none;
   flex-direction: column;
   justify-content: space-between;
   width: 28px;
@@ -139,7 +123,6 @@ h2 {
   background: #282928;
   transition: all 0.3s;
 }
-/* × ボタンのアニメーション */
 .burger.open span:nth-child(1) {
   transform: translateY(9px) rotate(45deg);
 }
@@ -149,10 +132,9 @@ h2 {
 .burger.open span:nth-child(3) {
   transform: translateY(-9px) rotate(-45deg);
 }
-
 /* ===== スマホ用ドロップダウン ===== */
 .tabs-mobile {
-  display: none; /* 常に非表示（JSで制御） */
+  display: none;
   flex-direction: column;
   width: 100%;
   background: #ffffff;
@@ -178,17 +160,15 @@ h2 {
   border-bottom-color: #282928;
   border-left: 3px solid #282928;
 }
-
 /* ===== スマホ時の切り替え ===== */
 @media (max-width: 768px) {
   .burger {
-    display: flex; /* スマホでハンバーガー表示 */
+    display: flex;
   }
   #tabs-pc {
-    display: none; /* PCタブを非表示 */
+    display: none;
   }
 }
-
 /* ===== フッター ===== */
 footer {
   width: 100%;
