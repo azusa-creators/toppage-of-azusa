@@ -95,7 +95,7 @@ h2 {
 /* ===== コンテンツボックス ===== */
 .content-box {
   display: block;
-  width: 60%;
+  width: min(90%, 800px);
   margin: 20px auto;
   padding: 30px;
   background-color: rgba(123, 129, 116, 0.85);
