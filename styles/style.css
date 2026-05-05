@@ -1,19 +1,9 @@
-/* 背景 */
-.background {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: url('../background.jpg') no-repeat center/cover;
-  z-index: -1;
-}
-
 /* ヘッダー */
 header {
     width: 100%;
     background: rgba(255, 255, 255, 1);
-    color: #282928;
+    color: 
+#282928;
     padding: 15px 50px;
     box-sizing: border-box;
     position: fixed;
@@ -28,67 +18,48 @@ header {
   justify-content: space-between;
   width: 100%;
 }
+/* ヘッダー内タブの色を白背景用に上書き */
+header .tabs {
+  border-bottom-color: rgba(0, 0, 0, 0.2);
+  margin-bottom: 0;
+  flex: 1;
+}
+header .tab-btn {
+  color: rgba(0, 0, 0, 0.5);
+  flex: 1;
+}
+header .tab-btn.active {
+  color: 
+#282928;
+  border-bottom-color: 
+#282928;
+}
+header .tab-btn:hover {
+  color: rgba(0, 0, 0, 0.8);
+}
+body {
+    padding-top: 110px; /* ヘッダーの高さに合わせて調整 */
+    padding-bottom: 60px; /* フッター分 */
+}
+/* タイトル余白調整 */
 header h1 {
     margin: 0;
 }
-
-/* ===== タブ ===== */
-.tabs {
-  display: flex;
-  flex: 1;
-  gap: 4px;
-  border-bottom: 1.5px solid rgba(0, 0, 0, 0.2);
-  margin-bottom: 0;
-}
-.tab-btn {
-  flex: 1;
-  text-align: center;
-  background: none;
-  border: none;
-  border-bottom: 2.5px solid transparent;
-  margin-bottom: -1.5px;
-  color: rgba(0, 0, 0, 0.5);
-  font-size: 14px;
-  padding: 8px 16px;
-  cursor: pointer;
-}
-.tab-btn.active {
-  color: #282928;
-  border-bottom-color: #282928;
-  font-weight: 500;
-}
-.tab-btn:hover {
-  color: rgba(0, 0, 0, 0.8);
-}
-.tab-panel {
-  display: none;
-}
-.tab-panel.active {
-  display: block;
-}
-
-/* body */
-body {
-    padding-top: 110px;
-    padding-bottom: 60px;
-}
-
 html {
     scroll-padding-top: 100px;
 }
-
-/* 見出し */
 h2 {
   display: inline-block;
   font-size: 20px;
   font-weight: 500;
   border-radius: 6px;
   padding: 8px 24px;
-  background: #E6F1FB;
-  color: #0C447C;
+  background: 
+#E6F1FB;
+  color: 
+#0C447C;
   margin: 0;
 }
-
 /* コンテンツボックス */
 .content-box {
     color: white;
@@ -100,12 +71,13 @@ h2 {
     font-size: 18px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
-
 /* フッター */
 footer {
     width: 100%;
-    background-color: #ffffff;
-    color: #000000;
+    background-color: 
+#ffffff;
+    color: 
+#000000;
     text-align: center;
     padding: 15px 0;
     position: fixed;
