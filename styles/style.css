@@ -42,34 +42,16 @@ h2 {
   background: #E6F1FB; color: #0C447C; margin: 0 0 16px;
 }
 
-.burger {
-  display: none; flex-direction: column; justify-content: space-between;
-  width: 28px; height: 20px; background: none; border: none;
-  cursor: pointer; padding: 0;
-}
-.burger span {
-  display: block; width: 100%; height: 2px;
-  background: #282928; transition: all 0.3s;
-}
-
-.tabs-mobile {
-  display: none; flex-direction: column; width: 100%;
-  background: #ffffff; border-top: 1px solid rgba(0,0,0,0.1);
-  overflow: hidden; max-height: 0; transition: max-height 0.3s ease;
-}
-.tabs-mobile .tab-btn {
-  flex: none; text-align: left; padding: 14px 24px;
-  border-bottom: 1px solid rgba(0,0,0,0.05);
-  font-size: 15px; color: rgba(0,0,0,0.6);
-}
-.tabs-mobile .tab-btn.active {
-  color: #282928; border-bottom-color: #282928;
-  border-left: 3px solid #282928;
-}
-
 @media (max-width: 768px) {
-  .burger { display: flex; }
-  #tabs-pc { display: none; }
+  .header-top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .tabs {
+    margin-left: 0;
+    margin-top: 8px;
+    width: 100%;
+  }
   .content-box {
     width: 95%;
     padding: 20px;
