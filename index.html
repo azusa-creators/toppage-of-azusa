@@ -6,19 +6,13 @@
   <link href="styles/style.css" rel="stylesheet" />
   <title>梓｜Azusa</title>
   <style>
-  .background {
-    position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: url('background.jpg') no-repeat center / cover;
-    z-index: -1;
-  }
-  /* ハンバーガー */
-  .burger.open span:nth-child(1) { transform: translateY(9px) rotate(45deg); }
-  .burger.open span:nth-child(2) { opacity: 0; }
-  .burger.open span:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
-  /* ドロップダウン */
-  .tabs-mobile.open { display: flex; max-height: 300px; }
+    .background {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: url('background.jpg') no-repeat center / cover;
+      z-index: -1;
+    }
   </style>
 </head>
 <body>
@@ -28,22 +22,13 @@
       <h1>
         <a href="index.html"><img src="icon.png" alt="梓ロゴ"></a>
       </h1>
-      <nav class="tabs" id="tabs-pc">
+      <nav class="tabs">
         <button class="tab-btn active" onclick="switchTab(0)">About us</button>
         <button class="tab-btn" onclick="switchTab(1)">『梓』について</button>
         <button class="tab-btn" onclick="switchTab(2)">作品</button>
         <button class="tab-btn" onclick="switchTab(3)">活動紹介</button>
       </nav>
-      <button class="burger" id="burger" onclick="toggleNav()" aria-label="メニュー">
-        <span></span><span></span><span></span>
-      </button>
     </div>
-    <nav class="tabs-mobile" id="tabs-mobile">
-      <button class="tab-btn active" onclick="switchTab(0); closeNav()">About us</button>
-      <button class="tab-btn" onclick="switchTab(1); closeNav()">『梓』について</button>
-      <button class="tab-btn" onclick="switchTab(2); closeNav()">作品</button>
-      <button class="tab-btn" onclick="switchTab(3); closeNav()">活動紹介</button>
-    </nav>
   </header>
   <main class="content-box">
     <div class="tab-panel active" id="tab0">
@@ -76,14 +61,6 @@
     function switchTab(i) {
       document.querySelectorAll('.tab-btn').forEach((b, j) => b.classList.toggle('active', i === j));
       document.querySelectorAll('.tab-panel').forEach((p, j) => p.classList.toggle('active', i === j));
-    }
-    function toggleNav() {
-      document.getElementById('burger').classList.toggle('open');
-      document.getElementById('tabs-mobile').classList.toggle('open');
-    }
-    function closeNav() {
-      document.getElementById('burger').classList.remove('open');
-      document.getElementById('tabs-mobile').classList.remove('open');
     }
   </script>
 </body>
